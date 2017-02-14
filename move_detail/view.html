@@ -1,0 +1,29 @@
+<div class="detail" ng-show="isShow">
+    <h1 ng-bind="t.title"></h1>
+    <div class="dt-info">
+        <div class="dti-i"><img ng-src="{{t.images.large}}" alt=""></div>
+        <div class="dti-w">
+            <p>
+                <strong>导演：</strong>
+                <span ng-repeat="cast in t.casts">{{cast.name}}{{$last?"":"、"}}</span>
+            </p>
+            <p>
+                <strong>主演：</strong>
+                <span ng-repeat="cast in t.directors">{{cast.name}}{{$last?"":"、"}}</span>
+            </p>
+            <p><strong>类型：</strong><span ng-repeat="cast in t.genres">{{cast}}{{$last?"":"、"}}</span></p>
+            <p><strong>国家：</strong>{{t.countries[0]}}</p>
+            <p><strong>评分：</strong><span>{{t.rating.average}}</span></p>
+            <p><strong>时间：</strong>{{t.year}}</p>
+            <p><strong>又名：</strong>{{t.original_title}}</p>
+        </div>
+    </div>
+    <h3>剧情简介:</h3>
+    <p style="color:#676767">{{t.summary}}</p>
+</div>
+<div class="zhezhao" ng-show="isdonghua">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div>

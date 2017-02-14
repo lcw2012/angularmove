@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影展示</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+</head>
+<body ng-app="moviecat" ng-controller="mainController">
+<!-- 导航栏 -->
+<div class="top">
+    <div class="header">
+        <a href="#/home_page"><img src="assets/img/ag.svg" alt=""></a>
+        <div class="search">
+            <input class="my-input" type="text" placeholder="电影搜索" ng-model="query">
+            <button ng-click="search()">搜索</button>
+        </div>
+    </div>
+    <nav class="nav">
+        <ul>
+            <!-- 类样式-->
+            <li auto-active><a href="#/home_page">首页</a></li>
+            <li auto-active><a href="#/in_theaters">正在热映</a></li>
+            <li auto-active><a href="#/coming_soon">即将上映</a></li>
+            <li auto-active><a href="#/top250">Top250</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- 顶部导航栏结束 -->
+<div class="container">
+    <div ng-view></div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <h2 class="c_text">Angular展示小demo</h2>
+    </div>
+</footer>
+<script src="assets/js/prefixfree.min.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="home/module.js"></script>
+<script src="common/jsonpqingqiu.js"></script>
+<script src="move_list/module.js"></script>
+<script src="common/auto-active.js"></script>
+<script src="move_detail/module.js"></script>
+</body>
+</html>
